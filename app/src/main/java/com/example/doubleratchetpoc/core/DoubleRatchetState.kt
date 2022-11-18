@@ -1,4 +1,4 @@
-package com.example.doubleratchet
+package com.example.doubleratchetpoc.core
 
 import com.google.common.collect.HashBasedTable
 
@@ -6,11 +6,11 @@ import com.google.common.collect.HashBasedTable
  * @author Michal Ozaniak
  */
 data class DoubleRatchetState(
-        var keyPair: DoubleRatchetKeyPair,
-        var receivedPublicKey: ByteArray?,
-        var rootKey: ByteArray,
-        var sendingChainKey: ByteArray?,
-        var receivingChainKey: ByteArray?
+    var keyPair: DoubleRatchetKeyPair,
+    var receivedPublicKey: ByteArray?,
+    var rootKey: ByteArray,
+    var sendingChainKey: ByteArray?,
+    var receivingChainKey: ByteArray?
 ) {
 
     var messageNumberSendingChain: Int = 0

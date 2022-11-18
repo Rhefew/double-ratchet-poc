@@ -1,4 +1,4 @@
-package com.example.doubleratchet
+package com.example.doubleratchetpoc.core
 
 import java.nio.ByteBuffer
 

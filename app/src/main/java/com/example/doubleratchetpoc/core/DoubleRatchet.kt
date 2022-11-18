@@ -1,4 +1,4 @@
-package com.example.doubleratchet
+package com.example.doubleratchetpoc.core
 
 import org.spongycastle.crypto.BlockCipher
 import org.spongycastle.crypto.digests.SHA512Digest
@@ -24,7 +24,8 @@ class DoubleRatchet private constructor(val appSpecificInfo: ByteArray,
                                         val AEADBlockCipher: AEADBlockCipher,
                                         val fixedNonce: ByteArray,
                                         val macSize: Int,
-                                        val keyPairGenerator: DoubleRatchetKeyPairGenerator) {
+                                        val keyPairGenerator: DoubleRatchetKeyPairGenerator
+) {
 
     private constructor(builder: Builder) : this(
             builder.appSpecificInfo, // Optional HKDF info parameter. Random app specific byte array
