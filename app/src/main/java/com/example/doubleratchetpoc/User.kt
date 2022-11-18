@@ -1,8 +1,8 @@
 package com.example.doubleratchetpoc
 
 import android.util.Log
-import com.example.doubleratchet.DoubleRatchetPacket
-import com.example.doubleratchet.DoubleRatchetState
+import com.example.doubleratchetpoc.core.DoubleRatchetPacket
+import com.example.doubleratchetpoc.core.DoubleRatchetState
 
 
 /**

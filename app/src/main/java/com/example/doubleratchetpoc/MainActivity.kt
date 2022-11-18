@@ -2,9 +2,14 @@ package com.example.doubleratchetpoc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import org.spongycastle.jce.provider.BouncyCastleProvider
+import java.security.Security
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        Security.addProvider(BouncyCastleProvider())
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

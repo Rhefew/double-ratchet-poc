@@ -1,6 +1,7 @@
 package com.example.doubleratchetpoc
 
-import com.example.doubleratchet.DoubleRatchet
+import com.example.doubleratchetpoc.core.DoubleRatchet
+import java.security.Security
 
 /**
  * @author Michal Ozaniak

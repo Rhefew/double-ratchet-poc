@@ -14,7 +14,7 @@ class DefaultKeyPair(val keyPair: KeyPair) : DoubleRatchetKeyPair {
     override fun getPrivateKey(): ByteArray = keyPair.private.encoded
 
     override fun getAgreement(publicKey: ByteArray): ByteArray =
-            KeyAgreement.getInstance("ECDH", "AndroidKeyStore")
+            KeyAgreement.getInstance("EC")
                 .generateSecret()
 
 }
@@ -25,7 +25,7 @@ fun generateECKeys(): KeyPair? {
 //            ECNamedCurveTable.getParameterSpec("brainpoolp256r1")
             ECNamedCurveTable.getParameterSpec("secp256r1")
         val keyPairGenerator: KeyPairGenerator = KeyPairGenerator.getInstance(
-            "ECDH", "BC"
+            "EC", "SC"
         )
         keyPairGenerator.initialize(parameterSpec)
         keyPairGenerator.generateKeyPair()
