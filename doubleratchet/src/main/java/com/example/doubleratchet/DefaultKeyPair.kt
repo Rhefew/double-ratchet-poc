@@ -6,7 +6,7 @@ import org.whispersystems.curve25519.Curve25519KeyPair
 /**
  * @author Michal Ozaniak
  */
-class DefaultKeyPair(val curve25519KeyPair: Curve25519KeyPair) : DoubleRatchetKeyPair {
+class DefaultKeyPair(private val curve25519KeyPair: Curve25519KeyPair) : DoubleRatchetKeyPair {
 
     override fun getPublicKey(): ByteArray = curve25519KeyPair.publicKey
 
